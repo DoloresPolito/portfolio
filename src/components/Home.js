@@ -3,13 +3,17 @@ import ContactForm from "./ContactForm";
 import Cover from "./Cover";
 import ProyectCard from "./ProyectCard";
 import About from "./About";
+import ProyectsNew from "./ProyectsNew"
+import Navbar from "./Navbar";
 
 const Home = function () {
   return (
     <>
+    <Navbar/>
       <Cover />
       <About/>
-      <ProyectCard />
+      <ProyectsNew/>
+      {/* <ProyectCard /> */}
       <ContactForm/>
     </>
   );

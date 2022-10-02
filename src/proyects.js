@@ -20,7 +20,7 @@ const proyectsA = [
   {
     name: "NetGlobal",
     description:
-      "Aplicación web y PWA desde la cual una empresa de seguridad puede gestionar y controlar la presencia de vigiladores dentro de las distintas sucursales de sus clientes.",
+      "Web application for administrators and PWA for security guards from which a security company can manage and control the presence of guards within the different branches of its clients.",
     slack: ["React", "Redux", "Express", "Sequelize", "NodeJS", "JWT"],
     links: ["https://github.com/DoloresPolito/net-global"],
     images: [   "/images/reactsportmin/3min.png",
@@ -51,14 +51,14 @@ const proyectsA = [
 ];
 
 
-const TMDB = {name: "The Movie DataBase",
-description:"Proyecto que consume The Movie Database API, donde los usuarios se registran y pueden buscar y ver detalles de películas, guardar favoritos, etc.",
-slack: ["React", "Redux", "Express", "Sequelize"],
-links: ["https://github.com/DoloresPolito/TMDB-v2"],
-images: [   "/images/reactsportmin/3min.png",
+// const TMDB = {name: "The Movie DataBase",
+// description:"Proyecto que consume The Movie Database API, donde los usuarios se registran y pueden buscar y ver detalles de películas, guardar favoritos, etc.",
+// slack: ["React", "Redux", "Express", "Sequelize"],
+// links: ["https://github.com/DoloresPolito/TMDB-v2"],
+// images: [   "/images/reactsportmin/3min.png",
 
-"/images/reactsportmin/8min.png",
-"/images/reactsportmin/9min.png",]}
+// "/images/reactsportmin/8min.png",
+// "/images/reactsportmin/9min.png",]}
 
 const BeluMi = {
   name: "Belen Miguens",
@@ -72,7 +72,7 @@ const BeluMi = {
 
 const NetGlobal = {    name: "NetGlobal",
 description:
-  "Aplicación web y PWA desde la cual una empresa de seguridad puede gestionar y controlar la presencia de vigiladores dentro de las distintas sucursales de sus clientes.",
+"Web application and PWA from which a security company can manage and control the presence of guards within the different branches of its clients and security guards can control their hours worked, check schedules and branches.",
 slack: ["React", "Redux", "Express", "Sequelize", "NodeJS", "JWT"],
 links: ["https://github.com/DoloresPolito/net-global"],
 images: [   "/images/reactsportmin/3min.png",
@@ -84,7 +84,7 @@ images: [   "/images/reactsportmin/3min.png",
 const ReactSport = {
   name: "React Sport",
   description:
-    "E-commerce de productos deportivos. Carrito de compras, persistencia de sesion, login, logout. ",
+    "E-commerce of sports products. Registration, logging and session persistence. Shopping cart, search engine by product and review form. It has administrator and client roles, responding to the needs of each one. Developed in group of 5, using the SCRUM methodology, in a period of two weeks. ",
   slack: ["React", "Redux", "Express", "Sequelize"],
   links: ["https://github.com/DoloresPolito/reactsport"],
   images: [
@@ -98,4 +98,4 @@ const ReactSport = {
     "/images/reactsportmin/10min.png",
   ],
 }
-module.exports = { proyectsA, ReactSport,NetGlobal,TMDB,BeluMi };
+module.exports = { proyectsA, ReactSport,NetGlobal,BeluMi };

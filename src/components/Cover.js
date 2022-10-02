@@ -1,12 +1,24 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import useObserver from "../hooks/useObserver";
 import { useTrail, useSpring, animated as a } from "react-spring";
 
-const items = ["Hi,", "I'm Dolores Polito"];
+const items = ["Hi, I'm", "Dolores Polito"];
 const config = { mass: 8, tension: 500, friction: 200 };
 
 const Cover = function () {
+
+
+  const [coverWidth, setCoverWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    window.addEventListener("resize", () => setCoverWidth(window.innerWidth));
+  }, []);
+
+
+  const coverCut = 560;
+
+
+
   function downloadFile(path, fileName) {
     const downloadInstance = document.createElement("a");
     downloadInstance.href = path;
@@ -17,6 +29,8 @@ const Cover = function () {
     downloadInstance.click();
     document.body.removeChild(downloadInstance);
   }
+
+
 
   const triggerRefAbout = useRef();
   const dataRef = useObserver(triggerRefAbout, {
@@ -32,6 +46,17 @@ const Cover = function () {
     },
   });
 
+  const smallTitle = useSpring({
+    config: { duration: 900 },
+    from: { opacity: 0, transform: "scale(0.2)" },
+
+    to: {
+      opacity: dataRef?.isIntersecting ? 1 : 0,
+      transform: "scale(1)",
+    },
+  });
+
+
   const [toggle, set] = useState(true);
   const trail = useTrail(items.length, {
     config,
@@ -44,41 +69,12 @@ const Cover = function () {
   return (
     <div className="cover-container">
       <div ref={triggerRefAbout} />
-      <div className="navbar">
-        <Link
-          className="nav-item"
-          to="about"
-          spy={true}
-          smooth={true}
-          offset={-160}
-          duration={800}
-        >
-          ABOUT
-        </Link>
-        <Link
-          className="nav-item"
-          to="proyects"
-          spy={true}
-          smooth={true}
-          offset={-13}
-          duration={800}
-        >
-          PROJECTS
-        </Link>
-        <Link
-          className="nav-item"
-          to="contact"
-          spy={true}
-          smooth={true}
-          offset={70}
-          duration={800}
-        >
-          CONTACT
-        </Link>
-      </div>
-      {/* <div className="linea"></div> */}
 
-      <div className="trails-main" onClick={() => set((state) => !state)}>
+
+      
+      {coverWidth >= coverCut ? (<>
+      
+        <div className="trails-main" onClick={() => set((state) => !state)}>
         <div>
           {trail.map(({ x, height, ...rest }, index) => (
             <a.div
@@ -95,10 +91,19 @@ const Cover = function () {
           ))}
         </div>
       </div>
+      </>) : (<>
+      
+      <div style={smallTitle}>
+        <h1 className="small-title">Hi, I'm <br/>Dolores Polito.</h1>
+      </div> 
+      
+      </>) }
+
+      
+
 
       <a.div style={paStyle}>
         <div>
-          {/* <h1 className="name">Hi, I'm Dolores Polito</h1> */}
           <p className="subname">FULLSTACK DEVELOPER | INDUSTRIAL ENGINEER</p>
         </div>
       </a.div>
