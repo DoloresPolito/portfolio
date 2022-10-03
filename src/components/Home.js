@@ -13,7 +13,6 @@ const Home = function () {
       <Cover />
       <About/>
       <ProyectsNew/>
-      {/* <ProyectCard /> */}
       <ContactForm/>
     </>
   );

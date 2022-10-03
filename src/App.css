@@ -68,6 +68,8 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  margin-bottom: 200px;
+
 }
 .horizontal-card {
   display: flex;
@@ -270,8 +272,70 @@ body {
       list-style: none;
       }
 
-      .cover-container{margin-top: 100px !important;}
+      .cover-container{margin-top: 100px !important;
+      height: 500px !important;}
 
+      .trails-main{
+        justify-content: flex-start !important;
+        padding-left: 50px !important;
+
+      }
+
+      .trails-text{
+        font-size: 3rem;
+      }
+
+
+      .cover-links{
+        margin-left: 30px !important;
+      }
+
+      .cover-bottom{
+        margin-left: 40px !important;
+        font-size: 18px !important;
+      }
+
+      .subname {
+   
+        font-size: 25px !important;
+        margin-left: 45px !important;
+     
+      }
+
+      .proyects-container{
+        margin-bottom: 150px;
+      }
+
+
+}
+
+@media (max-width: 560px) {
+
+
+      .small-title{
+        margin-left: 30px !important;
+        font-size: 40px !important;
+      } 
+
+      .cover-links{
+        margin-left: 30px !important;
+      }
+
+      .cover-bottom{
+        margin-left: 40px !important;
+        font-size: 15px !important;
+      }
+
+      .subname {
+   
+        font-size: 20px !important;
+        margin-left: 45px !important;
+     
+      }
+
+      .proyects-container{
+        margin-bottom: 150px;
+      }
 }
 /*FOOTER*/
 
@@ -299,7 +363,7 @@ footer section a {
 
 footer section a:hover {
   font-size: larger;
-  color: #7a746e;
+  color: grey;
 }
 
 footer aside p {
@@ -393,7 +457,7 @@ footer aside p {
 
 .form-section div a:hover {
   text-decoration: none;
-  color: #7a746e;
+  color: grey;
 }
 
 ::placeholder {
@@ -464,7 +528,7 @@ textarea:focus {
 }
 
 .cover-links a:hover {
-  color: #7a746e;
+  color: #9fa99f;
 }
 
 .cover-bottom {
@@ -518,7 +582,7 @@ textarea:focus {
 }
 
 .contact-button:hover {
-  color: #7a746e;
+  color: #9fa99f;
   border: 1px solid #7a746e;
   font-weight: 700;
 }
@@ -611,7 +675,7 @@ textarea:focus {
 }
 
 .other-item a:hover {
-  color: grey !important;
+  color: #9fa99f !important;
 }
 
 .aboutme-container {
