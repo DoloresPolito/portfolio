@@ -14,7 +14,7 @@ const Cover = function () {
   const [coverWidth, setCoverWidth] = useState(window.innerWidth);
   useEffect(() => {
     window.addEventListener("resize", () => setCoverWidth(window.innerWidth),{passive:true});
-    setLinksVisible((v) => !v);
+ 
   }, []);
 
   const coverCut = 560;
@@ -29,6 +29,8 @@ const Cover = function () {
     downloadInstance.click();
     document.body.removeChild(downloadInstance);
   }
+
+
 
   const triggerRefAbout = useRef();
   const dataRef = useObserver(triggerRefAbout, {
@@ -54,6 +56,7 @@ const Cover = function () {
       transform: "scale(1)",
     },
   });
+  
   const [toggle, set] = useState(true);
   const trail = useTrail(items.length, {
     config,
@@ -64,12 +67,11 @@ const Cover = function () {
   });
 
   //links animation
-  const [linksVisible, setLinksVisible] = useState(true);
-  const transition = useTransition(linksVisible, {
+  const transition = useTransition(dataRef, {
     config: { duration: 900 },
     from: { x: -400, y: 0, opacity: 0},
     enter: { x: 0, y: 0, opacity: 1 },
-    // leave: { x: 100, y: 0, opacity: 0 },
+
   });
 
   return (

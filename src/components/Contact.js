@@ -1,8 +1,7 @@
-import React, {useRef } from "react";
+import React, { useRef } from "react";
 import useObserver from "../hooks/useObserver";
 import { useTransition, animated as a } from "react-spring";
 import "../App.css";
-
 
 function Contact() {
   const triggerRefAbout1 = useRef();
@@ -14,7 +13,6 @@ function Contact() {
   const dataRef2 = useObserver(triggerRefAbout2, {
     freezeOnceVisible: true,
   });
-
 
   const transition1 = useTransition(dataRef1, {
     config: { duration: 900 },
@@ -33,59 +31,53 @@ function Contact() {
       <div ref={triggerRefAbout1} />
       <div ref={triggerRefAbout2} />
       <div className="contact" id="contact">
+        {transition1((style, item) =>
+          item ? (
+            <a.div style={style}>
+              <a
+                style={{ textDecoration: "none" }}
+                href="mailto:dolores.polito@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="contact-item">
+                  <i className="bi bi-envelope"></i>
 
-      {transition1((style, item) =>
-              item ? (
-                <a.div  style={style}>
-      
-        <a
-          style={{ textDecoration: "none" }}
-          href="mailto:dolores.polito@gmail.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="contact-item">
-            <i className="bi bi-envelope"></i>
+                  <p className="item">EMAIL</p>
 
-            <p className="item">EMAIL</p>
+                  <div className="linea-contact"></div>
 
-            <div className="linea-contact"></div>
+                  <p className="item"> dolores.polito@gmail.com</p>
+                </div>
+              </a>
+            </a.div>
+          ) : (
+            ""
+          )
+        )}
 
-            <p className="item"> dolores.polito@gmail.com</p>
-          </div>
-        </a>
+        {transition2((style, item) =>
+          item ? (
+            <a.div style={style}>
+              <a
+                style={{ textDecoration: "none" }}
+                href="https://www.linkedin.com/in/dolores-polito/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="contact-item">
+                  <i className="bi bi-linkedin"></i>
 
-        </a.div>
-              ) : (
-                ""
-              )
-            )}
-
-
-{transition2((style, item) =>
-              item ? (
-                <a.div  style={style}>
-       <a
-          style={{ textDecoration: "none" }}
-          href="https://www.linkedin.com/in/dolores-polito/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="contact-item">
-            <i className="bi bi-linkedin"></i>
-
-            <p className="item">LINKEDIN</p>
-            <div className="linea-contact"></div>
-            <p>/dolores-polito</p>
-          </div>
-        </a>
-        </a.div>
-              ) : (
-                ""
-              )
-            )}
-
-       
+                  <p className="item">LINKEDIN</p>
+                  <div className="linea-contact"></div>
+                  <p>/dolores-polito</p>
+                </div>
+              </a>
+            </a.div>
+          ) : (
+            ""
+          )
+        )}
       </div>
 
       <div className="contact-other">
