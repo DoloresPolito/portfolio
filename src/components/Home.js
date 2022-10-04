@@ -1,5 +1,5 @@
 import React from "react";
-import ContactForm from "./ContactForm";
+import Contact from "./Contact";
 import Cover from "./Cover";
 import ProyectCard from "./ProyectCard";
 import About from "./About";
@@ -13,7 +13,7 @@ const Home = function () {
       <Cover />
       <About/>
       <ProyectsNew/>
-      <ContactForm/>
+      <Contact/>
     </>
   );
 };

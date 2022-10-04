@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 const Navbar = function () {
   const [navbarWidth, setNavbarWidth] = useState(window.innerWidth);
   useEffect(() => {
-    window.addEventListener("resize", () => setNavbarWidth(window.innerWidth));
+    window.addEventListener("resize", () => setNavbarWidth(window.innerWidth),{passive:true});
   }, []);
 
   const navbarCut = 600;
@@ -27,24 +27,24 @@ const Navbar = function () {
             <div className="navbar-links">
               <ul>
                 <li>
-                  <a>
-                    {" "}
+           
+             
                     <Link
                       className="nav-item"
                       to="about"
                       spy={true}
                       smooth={true}
-                      offset={-160}
+                      offset={30}
                       duration={800}
                     >
                       ABOUT
                     </Link>
-                  </a>
+               
                 </li>
 
                 <li>
-                  <a>
-                    {" "}
+              
+                 
                     <Link
                       className="nav-item"
                       to="proyects"
@@ -55,12 +55,11 @@ const Navbar = function () {
                     >
                       PROJECTS
                     </Link>
-                  </a>
+             
                 </li>
 
                 <li>
-                  <a>
-                    {" "}
+                
                     <Link
                       className="nav-item"
                       to="contact"
@@ -71,7 +70,7 @@ const Navbar = function () {
                     >
                       CONTACT
                     </Link>
-                  </a>
+            
                 </li>
               </ul>
             </div>

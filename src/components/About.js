@@ -2,10 +2,9 @@ import React, { useRef } from "react";
 import ScrollToTop from "react-scroll-to-top";
 import "../App.css";
 
-import { animated, useSpring } from "@react-spring/web";
+
 import useObserver from "../hooks/useObserver";
-
-
+import { useTransition, useSpring, animated as a } from "react-spring";
 
 const About = function () {
   const triggerRefAbout = useRef();
@@ -21,42 +20,140 @@ const About = function () {
       transform: "scale(1)",
     },
   });
+
+
+
+  //stak animation
+
+  const triggerRefAbout1 = useRef();
+  const dataRef1 = useObserver(triggerRefAbout1, {
+    freezeOnceVisible: true,
+  });
+
+  const triggerRefAbout2 = useRef();
+  const dataRef2 = useObserver(triggerRefAbout2, {
+    freezeOnceVisible: true,
+  });
+
+
+  const transition1 = useTransition(dataRef1, {
+    config: { duration: 500 },
+    from: { x: -200, y: 0, opacity: 0 },
+    enter: { x: 0, y: 0, opacity: 1 },
+  });
+  const transition2 = useTransition(dataRef2, {
+    config: { duration: 500 },
+    from: { x: 200, y: 0, opacity: 0 },
+    enter: { x: 0, y: 0, opacity: 1 },
+  });
+
+
   return (
     <>
-      <h2 className="title">ABOUT ME</h2>
       <div className="aboutme-container" id="about">
+        <h2 className="title">ABOUT ME</h2>
+
         <section className="aboutme-section">
           <div className="content">
             <div ref={triggerRefAbout} />
-            <animated.div style={pStyle}>
+            <a.div style={pStyle}>
               <div className="linea"></div>
               <p className="text-about">
-                I am a Full Stack Developer and an Industrial Engineer. I have
-                experience working with NodeJS, Express, React, Redux and
-                Sequelize among other technologies in this area.
-                {/* I have an outstanding capacity to combine my technical and soft skills with my knowledge, all of which I acquired at university. I have acquired a personal capacity for action on uncertain scenarios, for adaptation to new situations and to team work. */}
-                {/* I am currently looking forward to joining a technological
-                development company, so I can put my professionalism and
-                qualifications to work, while also having the possibility to
-                grow and enhance my skills. */}<br/>
-                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
+                I am a full stack developer and an industrial engineer based in
+                Buenos Aires, Argentina. My interest in programming began while
+                I was studying engineering and finally a year ago I decided to
+                study it. I love the logic and structure of coding and always
+                strive to write elegant and efficient code. I lean towards front
+                end development since I really like design. I am currently
+                looking to join a technology development company, to contribute
+                my professionalism, grow and enhance my skills.
               </p>
               <br />
               <div className="linea"></div>
-            </animated.div>
+            </a.div>
           </div>
         </section>
+        <section className="aboutme-section-stack">
+        <div ref={triggerRefAbout1} />
+      <div ref={triggerRefAbout2} />
+          <h4 className="stack-title">FRONTEND</h4>
 
-       
+          {transition1((style, item) =>
+              item ? (
+                <a.div   className="stack-front" style={style}>
+      
+            <img
+              src="	https://portfolio-franco-mino.vercel.app/images/imgSkills/descarga.png"
+              alt="HTML"
+            />
+            <img
+              src="		https://portfolio-franco-mino.vercel.app/images/imgSkills/css-logo.efd17a83.png"
+              alt="CSS"
+            />
+            <img
+              src="			https://portfolio-franco-mino.vercel.app/images/imgSkills/javascript-logo-svg-vector.31ff4b10.svg"
+              alt="JAVASCRIPT"
+            />
+            <img
+              src="			https://portfolio-franco-mino.vercel.app/images/imgSkills/bootstrap-5-1.98585727.svg"
+              alt="BOOTSTRAP"
+            />
 
+            <img
+              src="		https://bineo-consulting.com/assets/svg/logos/react.svg"
+              alt="REACT"
+            />
+       </a.div>
+              ) : (
+                ""
+              )
+            )}
+
+          <h4 className="stack-title">BACKEND</h4>
+
+          {transition2((style, item) =>
+              item ? (
+                <a.div className="stack-back" style={style}>
+   
+            <img
+              src="https://portfolio-franco-mino.vercel.app/images/imgSkills/node.svg"
+              alt="NODE JS"
+            />
+            <img
+              src="	https://seeklogo.com/images/S/sequelize-logo-9A5075DB9F-seeklogo.com.png"
+              alt="SEQUELIZE"
+            />
+            <img
+              src="	https://portfolio-franco-mino.vercel.app/images/imgSkills/descarga(1).png"
+              alt="EXPRESS"
+            />
+
+            <img
+              src="		https://portfolio-franco-mino.vercel.app/images/imgSkills/postgresql-icon.b941b412.svg"
+              alt="POSTGRES"
+            />
+
+            <img
+              src="		https://portfolio-franco-mino.vercel.app/images/imgSkills/postman.e65afafe.svg"
+              alt="POSTMAN"
+            />
+          
+            </a.div>
+            ) : (
+              ""
+            )
+          )}
+              <div className="linea"></div>
+        </section>
+   
         <ScrollToTop
-            style={{
-              textDecoration: "none",
-              backgroundColor: "#fff7f0",
-              height: "55px",
-            }}
-            smooth
-          /> 
+          style={{
+            textDecoration: "none",
+            backgroundColor: "#fff7f0",
+            height: "55px",
+          }}
+          smooth
+        />
       </div>
     </>
   );
