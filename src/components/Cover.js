@@ -37,6 +37,11 @@ const Cover = function () {
     freezeOnceVisible: true,
   });
 
+  const triggerRefAbout1 = useRef();
+  const dataRef1 = useObserver(triggerRefAbout1, {
+    freezeOnceVisible: true,
+  });
+
   const paStyle = useSpring({
     config: { duration: 900 },
     from: { opacity: 0, transform: "scale(0.2)" },
@@ -56,7 +61,7 @@ const Cover = function () {
       transform: "scale(1)",
     },
   });
-  
+
   const [toggle, set] = useState(true);
   const trail = useTrail(items.length, {
     config,
@@ -67,7 +72,7 @@ const Cover = function () {
   });
 
   //links animation
-  const transition = useTransition(dataRef, {
+  const transition = useTransition(dataRef1, {
     config: { duration: 900 },
     from: { x: -400, y: 0, opacity: 0},
     enter: { x: 0, y: 0, opacity: 1 },
@@ -112,6 +117,7 @@ const Cover = function () {
           <p className="subname">FULLSTACK DEVELOPER | INDUSTRIAL ENGINEER</p>
         </div>
       </a.div>
+      <div ref={triggerRefAbout1} />
 
       {transition((style, item) =>
         item ? (
