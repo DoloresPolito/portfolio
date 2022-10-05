@@ -41,7 +41,7 @@ const ReactSport = {
 const Chatbot = {
   name: "CHATBOT",
   description:
-  "E-commerce of sports products where you can search by product or category, see product details, add products to the cart and make the purchase. It also allows you to see reviews and make them in the event that the product is purchased. Registration and login through different platforms and session persistence",
+"Participation in the Chat Bot project together with other people for a company that provides machinery services, through which customers can report a problem with a piece of equipment and the bot provides them with possible solutions to solve it. In addition, you can request technical help to fix equipment and request detailed queries.",
     slack: ["Node.js", "Twilio"],
   links: ["https://github.com/DoloresPolito/reactsport"],
   

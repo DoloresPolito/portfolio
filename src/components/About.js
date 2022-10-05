@@ -65,8 +65,7 @@ const About = function () {
                 study it. I love the logic and structure of coding and always
                 strive to write elegant and efficient code. I lean towards front
                 end development since I really like design. I am currently
-                looking to join a technology development company, to contribute
-                my professionalism, grow and enhance my skills.
+                looking to join a technology development company to grow and enhance my skills.
               </p>
               <br />
               <div className="linea"></div>
