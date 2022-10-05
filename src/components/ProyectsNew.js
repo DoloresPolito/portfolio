@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import useObserver from "../hooks/useObserver";
 import { useTransition, animated as a } from "react-spring";
-const { ReactSport, NetGlobal, BeluMi,proyects } = require("../proyects");
+const { ReactSport, NetGlobal, BeluMi, proyects, Chatbot } = require("../proyects");
 
 const ProyectsNew = function () {
   const [width, setWidth] = useState(window.innerWidth);
   useEffect(() => {
-    window.addEventListener("resize", () => setWidth(window.innerWidth), {passive:true});
+    window.addEventListener("resize", () => setWidth(window.innerWidth), {
+      passive: true,
+    });
   }, []);
 
   const cut = 1150;
@@ -45,7 +47,6 @@ const ProyectsNew = function () {
   });
 
   return (
-
     <div className="proyects-container" id="proyects">
       <h2 className="title">PROJECTS</h2>
 
@@ -58,9 +59,7 @@ const ProyectsNew = function () {
               height="315"
               src="https://www.youtube.com/embed/v6zgdsmc-OI"
               title="YouTube video player"
-     
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-     
               className="video"
             ></iframe>
 
@@ -75,17 +74,21 @@ const ProyectsNew = function () {
                       {ReactSport.slack.map((slack) => {
                         return <li className="list-item">{slack}</li>;
                       })}
+                  
                     </ul>
+
+                   
                   </div>
                   <div className="github-logo-card">
-                  <a
-              href="https://github.com/DoloresPolito"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="bi bi-github"></i>
-            </a>
+                    <a
+                      href="https://github.com/DoloresPolito"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-github"></i>
+                    </a>
                   </div>
+                 
                 </a.div>
               ) : (
                 ""
@@ -100,9 +103,7 @@ const ProyectsNew = function () {
               height="315"
               src="https://www.youtube.com/embed/OU5o_bT37vk"
               title="YouTube video player"
-        
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-
               className="video"
             ></iframe>
 
@@ -138,9 +139,7 @@ const ProyectsNew = function () {
               height="315"
               src="https://www.youtube.com/embed/AJCpdYI4Yao"
               title="YouTube video player"
-         
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  
               className="video"
             ></iframe>
 
@@ -151,25 +150,52 @@ const ProyectsNew = function () {
                   <p className="card-text">{BeluMi.description}</p>
                   <br />
                   <div className="card-stack">
-          
                     <ul>
                       {BeluMi.slack.map((slack) => {
                         return <li className="list-item">{slack}</li>;
                       })}
                     </ul>
-                     <div className="github-logo-card">
-                    <a href={BeluMi.links} target="_blank">
-                      <i className="bi bi-github"></i>
-                    </a>
+                    <div className="github-logo-card">
+                      <a href={BeluMi.links} target="_blank">
+                        <i className="bi bi-github"></i>
+                      </a>
+                    </div>
                   </div>
-                  
-                  </div>
-             
                 </a.div>
               ) : (
                 ""
               )
             )}
+
+
+            
+          </div>
+
+          <div className="horizontal-card">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/xKERHAeIz-Y" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"       className="video"></iframe>
+
+            {transition2((style, item) =>
+              item ? (
+                <a.div className="card-description" style={style}>
+                  <h3 className="card-title">{Chatbot.name}</h3>
+                  <p className="card-text">{Chatbot.description}</p>
+                  <br />
+                  <div className="card-stack">
+                    <ul>
+                      {Chatbot.slack.map((slack) => {
+                        return <li className="list-item">{slack}</li>;
+                      })}
+                    </ul>
+                   
+                  </div>
+                </a.div>
+              ) : (
+                ""
+              )
+            )}
+
+
+            
           </div>
         </>
       ) : (
@@ -180,9 +206,7 @@ const ProyectsNew = function () {
               height="315"
               src="https://www.youtube.com/embed/v6zgdsmc-OI"
               title="YouTube video player"
-      
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-       
               className="video"
             ></iframe>
             <div className="card-description">
@@ -209,9 +233,7 @@ const ProyectsNew = function () {
               height="315"
               src="https://www.youtube.com/embed/OU5o_bT37vk"
               title="YouTube video player"
-
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-
               className="video"
             ></iframe>
             <div className="card-description">
@@ -239,9 +261,7 @@ const ProyectsNew = function () {
               height="315"
               src="https://www.youtube.com/embed/AJCpdYI4Yao"
               title="YouTube video player"
-     
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    
               className="video"
             ></iframe>
             <div className="card-description">
@@ -262,6 +282,33 @@ const ProyectsNew = function () {
                   <i className="bi bi-github"></i>
                 </a>
               </div>
+            </div>
+          </div>
+
+
+          <div className="vertical-card">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/xKERHAeIz-Y" 
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              className="video"
+            ></iframe>
+            <div className="card-description">
+              <h3 className="card-title">{Chatbot.name}</h3>
+              <p className="card-text">{Chatbot.description}</p>
+              {/* <div style={slideStyles} className="slides"></div> */}
+
+              <br />
+              <div className="card-stack">
+                <ul>
+                  {Chatbot.slack.map((slack) => {
+                    return <li className="list-item">{slack}</li>;
+                  })}
+                </ul>
+              </div>
+             
             </div>
           </div>
         </>

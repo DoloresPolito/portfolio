@@ -426,6 +426,20 @@ footer aside p {
   color: white;
 }
 
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 45px;
+  }
+}
+
+
+
 .contact-button {
   background-color: transparent;
   color: white;
@@ -475,6 +489,8 @@ footer aside p {
 .github-logo-card {
   display: flex;
   justify-content: flex-start;
+  margin-left: 15px;
+  margin-top: 30px;
 }
 
 .github-logo-card a {
@@ -578,25 +594,48 @@ margin-top: 30px;
   .stack-front img{
     height: 40px !important;
     width: 40px !important;
-    padding: 10px !important;
+    padding: 20px !important;
   }
   .stack-back img{
     height: 40px !important;
     width: 40px !important;
-    padding: 10px !important;
+    padding: 20px !important;
   }
+
+  .aboutme-section {
+    font-weight: 300;
+    font-size: 15px !important;
+ 
+  
+  }
+  .aboutme-container {
+ 
+    width: 80%;
+  }
+
 }
 
 @media only screen and (min-width: 450px) and (max-width: 600px) {
   .stack-front img{
     height: 35px !important;
     width: 35px !important;
-    padding: 5px !important;
+    padding: 10px !important;
   }
   .stack-back img{
     height: 35px !important;
     width: 35px !important;
-    padding: 5px !important;
+    padding: 10px !important;
+  }
+
+  .aboutme-section {
+    font-weight: 300;
+    font-size: 15px !important;
+ 
+  
+  }
+  .aboutme-container {
+ 
+    width: 80%;
   }
 }
 
@@ -604,12 +643,24 @@ margin-top: 30px;
   .stack-front img{
     height: 35px !important;
     width: 35px !important;
-    padding: 5px !important;
+    padding: 10px !important;
   }
   .stack-back img{
     height: 35px !important;
     width: 35px !important;
-    padding: 5px !important;
+    padding: 10px !important;
+  }
+
+  .aboutme-section {
+    font-weight: 300;
+    font-size: 15px !important;
+ 
+  
+  }
+
+  .aboutme-container {
+ 
+    width: 80%;
   }
 }
 
@@ -759,3 +810,18 @@ margin-top: 30px;
 800 about me y lineade cover
 
 */
+
+
+.arrow-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 230px;
+}
+
+.arrow-logo img{
+  width: 70px;
+  height: 70px;
+
+}
+

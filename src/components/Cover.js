@@ -6,6 +6,9 @@ import {
   useTransition,
   animated as a,
 } from "react-spring";
+import { Link } from "react-scroll";
+
+import logo from '../assets/arrow.svg'
 
 const items = ["Hi, I'm Dolores Polito"];
 const config = { mass: 8, tension: 500, friction: 200 };
@@ -153,6 +156,25 @@ const Cover = function () {
           ""
         )
       )}
+
+
+<div className="arrow-logo">
+
+<Link
+                      className="nav-item"
+                      to="about"
+                      spy={true}
+                      smooth={true}
+                      offset={30}
+                      duration={800}
+                    >
+                     <img src={logo}></img>
+                    </Link>
+               
+
+
+</div>
+
     </div>
   );
 };

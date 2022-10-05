@@ -38,6 +38,15 @@ const ReactSport = {
   ],
 }
 
+const Chatbot = {
+  name: "CHATBOT",
+  description:
+  "E-commerce of sports products where you can search by product or category, see product details, add products to the cart and make the purchase. It also allows you to see reviews and make them in the event that the product is purchased. Registration and login through different platforms and session persistence",
+    slack: ["Node.js", "Twilio"],
+  links: ["https://github.com/DoloresPolito/reactsport"],
+  
+}
+
 const proyects = { ReactSport, NetGlobal, BeluMi}
 
-module.exports = { proyects, ReactSport,NetGlobal,BeluMi };
+module.exports = { proyects, ReactSport,NetGlobal,BeluMi, Chatbot };
