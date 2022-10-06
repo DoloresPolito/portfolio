@@ -8,7 +8,7 @@ import {
 } from "react-spring";
 import { Link } from "react-scroll";
 
-import logo from '../assets/arrow.svg'
+import logo from "../assets/arrow.svg";
 
 const items = ["Hi, I'm Dolores Polito"];
 const config = { mass: 8, tension: 500, friction: 200 };
@@ -16,11 +16,12 @@ const config = { mass: 8, tension: 500, friction: 200 };
 const Cover = function () {
   const [coverWidth, setCoverWidth] = useState(window.innerWidth);
   useEffect(() => {
-    window.addEventListener("resize", () => setCoverWidth(window.innerWidth),{passive:true});
- 
+    window.addEventListener("resize", () => setCoverWidth(window.innerWidth), {
+      passive: true,
+    });
   }, []);
 
-  const coverCut = 560;
+  const coverCut = 600;
 
   function downloadFile(path, fileName) {
     const downloadInstance = document.createElement("a");
@@ -32,8 +33,6 @@ const Cover = function () {
     downloadInstance.click();
     document.body.removeChild(downloadInstance);
   }
-
-
 
   const triggerRefAbout = useRef();
   const dataRef = useObserver(triggerRefAbout, {
@@ -77,9 +76,8 @@ const Cover = function () {
   //links animation
   const transition = useTransition(dataRef1, {
     config: { duration: 900 },
-    from: { x: -400, y: 0, opacity: 0},
+    from: { x: -400, y: 0, opacity: 0 },
     enter: { x: 0, y: 0, opacity: 1 },
-
   });
 
   return (
@@ -108,7 +106,7 @@ const Cover = function () {
         <>
           <div style={smallTitle}>
             <h1 className="small-title">
-              Hi, I'm <br />
+              Hi, I'm 
               Dolores Polito.
             </h1>
           </div>
@@ -157,24 +155,18 @@ const Cover = function () {
         )
       )}
 
-
-<div className="arrow-logo">
-
-<Link
-                      className="nav-item"
-                      to="about"
-                      spy={true}
-                      smooth={true}
-                      offset={30}
-                      duration={800}
-                    >
-                     <img src={logo}></img>
-                    </Link>
-               
-
-
-</div>
-
+      <div className="arrow-logo">
+        <Link
+          className="nav-item"
+          to="about"
+          spy={true}
+          smooth={true}
+          offset={30}
+          duration={800}
+        >
+          <img src={logo}></img>
+        </Link>
+      </div>
     </div>
   );
 };

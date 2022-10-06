@@ -1,9 +1,8 @@
 import React from "react";
 import Contact from "./Contact";
 import Cover from "./Cover";
-import ProyectCard from "./ProyectCard";
 import About from "./About";
-import ProyectsNew from "./ProyectsNew"
+import Proyects from "./Proyects"
 import Navbar from "./Navbar";
 
 const Home = function () {
@@ -12,7 +11,7 @@ const Home = function () {
     <Navbar/>
       <Cover />
       <About/>
-      <ProyectsNew/>
+      <Proyects/>
       <Contact/>
     </>
   );

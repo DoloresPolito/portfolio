@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import ScrollToTop from "react-scroll-to-top";
 import "../App.css";
 
-
 import useObserver from "../hooks/useObserver";
 import { useTransition, useSpring, animated as a } from "react-spring";
 
@@ -21,8 +20,6 @@ const About = function () {
     },
   });
 
-
-
   //stak animation
 
   const triggerRefAbout1 = useRef();
@@ -35,7 +32,6 @@ const About = function () {
     freezeOnceVisible: true,
   });
 
-
   const transition1 = useTransition(dataRef1, {
     config: { duration: 500 },
     from: { x: -200, y: 0, opacity: 0 },
@@ -46,7 +42,6 @@ const About = function () {
     from: { x: 200, y: 0, opacity: 0 },
     enter: { x: 0, y: 0, opacity: 1 },
   });
-
 
   return (
     <>
@@ -65,7 +60,8 @@ const About = function () {
                 study it. I love the logic and structure of coding and always
                 strive to write elegant and efficient code. I lean towards front
                 end development since I really like design. I am currently
-                looking to join a technology development company to grow and enhance my skills.
+                looking to join a technology development company to grow and
+                enhance my skills.
               </p>
               <br />
               <div className="linea"></div>
@@ -73,78 +69,85 @@ const About = function () {
           </div>
         </section>
         <section className="aboutme-section-stack">
-        <div ref={triggerRefAbout1} />
-      <div ref={triggerRefAbout2} />
+          <div ref={triggerRefAbout1} />
+          <div ref={triggerRefAbout2} />
           <h4 className="stack-title">FRONTEND</h4>
 
           {transition1((style, item) =>
-              item ? (
-                <a.div   className="stack-front" style={style}>
-      
-            <img
-              src="	https://portfolio-franco-mino.vercel.app/images/imgSkills/descarga.png"
-              alt="HTML"
-            />
-            <img
-              src="		https://portfolio-franco-mino.vercel.app/images/imgSkills/css-logo.efd17a83.png"
-              alt="CSS"
-            />
-            <img
-              src="			https://portfolio-franco-mino.vercel.app/images/imgSkills/javascript-logo-svg-vector.31ff4b10.svg"
-              alt="JAVASCRIPT"
-            />
-            <img
-              src="			https://portfolio-franco-mino.vercel.app/images/imgSkills/bootstrap-5-1.98585727.svg"
-              alt="BOOTSTRAP"
-            />
+            item ? (
+              <a.div className="stack-front" style={style}>
+                <img
+                  src="	https://portfolio-franco-mino.vercel.app/images/imgSkills/descarga.png"
+                  alt="HTML"
+                  title="HTML"
+                />
+                <img
+                  src="		https://portfolio-franco-mino.vercel.app/images/imgSkills/css-logo.efd17a83.png"
+                  alt="CSS"
+                  title="CSS"
+                />
+                <img
+                  src="			https://portfolio-franco-mino.vercel.app/images/imgSkills/javascript-logo-svg-vector.31ff4b10.svg"
+                  alt="JAVASCRIPT"
+                  title="JAVASCRIPT"
+                />
+                <img
+                  src="			https://portfolio-franco-mino.vercel.app/images/imgSkills/bootstrap-5-1.98585727.svg"
+                  alt="BOOTSTRAP"
+                  title="BOOTSTRAP"
+                />
 
-            <img
-              src="		https://bineo-consulting.com/assets/svg/logos/react.svg"
-              alt="REACT"
-            />
-       </a.div>
-              ) : (
-                ""
-              )
-            )}
-
-          <h4 className="stack-title">BACKEND</h4>
-
-          {transition2((style, item) =>
-              item ? (
-                <a.div className="stack-back" style={style}>
-   
-            <img
-              src="https://portfolio-franco-mino.vercel.app/images/imgSkills/node.svg"
-              alt="NODE JS"
-            />
-            <img
-              src="	https://seeklogo.com/images/S/sequelize-logo-9A5075DB9F-seeklogo.com.png"
-              alt="SEQUELIZE"
-            />
-            <img
-              src="	https://portfolio-franco-mino.vercel.app/images/imgSkills/descarga(1).png"
-              alt="EXPRESS"
-            />
-
-            <img
-              src="		https://portfolio-franco-mino.vercel.app/images/imgSkills/postgresql-icon.b941b412.svg"
-              alt="POSTGRES"
-            />
-
-            <img
-              src="		https://portfolio-franco-mino.vercel.app/images/imgSkills/postman.e65afafe.svg"
-              alt="POSTMAN"
-            />
-          
-            </a.div>
+                <img
+                  src="		https://bineo-consulting.com/assets/svg/logos/react.svg"
+                  alt="REACT"
+                  title="REACT"
+                />
+              </a.div>
             ) : (
               ""
             )
           )}
-              <div className="linea"></div>
+
+          <h4 className="stack-title-back">BACKEND</h4>
+
+          {transition2((style, item) =>
+            item ? (
+              <a.div className="stack-back" style={style}>
+                <img
+                  src="https://portfolio-franco-mino.vercel.app/images/imgSkills/node.svg"
+                  alt="NODE JS"
+                  title="NODE.JS"
+                />
+                <img
+                  src="	https://seeklogo.com/images/S/sequelize-logo-9A5075DB9F-seeklogo.com.png"
+                  alt="SEQUELIZE"
+                  title="SEQUELIZE"
+                />
+                <img
+                  src="	https://portfolio-franco-mino.vercel.app/images/imgSkills/descarga(1).png"
+                  alt="EXPRESS"
+                  title="EXPRESS"
+                />
+
+                <img
+                  src="		https://portfolio-franco-mino.vercel.app/images/imgSkills/postgresql-icon.b941b412.svg"
+                  alt="POSTGRES"
+                  title="POSTGRES"
+                />
+
+                <img
+                  src="		https://portfolio-franco-mino.vercel.app/images/imgSkills/postman.e65afafe.svg"
+                  alt="POSTMAN"
+                  title="POSTMAN"
+                />
+              </a.div>
+            ) : (
+              ""
+            )
+          )}
+          <div className="linea"></div>
         </section>
-   
+
         <ScrollToTop
           style={{
             textDecoration: "none",
