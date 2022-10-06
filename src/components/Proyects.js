@@ -16,6 +16,7 @@ const Proyects = function () {
   const triggerRefAbout = useRef();
   const dataRef = useObserver(triggerRefAbout, {
     freezeOnceVisible: true,
+    
   });
 
   const triggerRefAbout1 = useRef();
@@ -25,6 +26,10 @@ const Proyects = function () {
 
   const triggerRefAbout2 = useRef();
   const dataRef2 = useObserver(triggerRefAbout2, {
+    freezeOnceVisible: true,
+  });
+  const triggerRefAbout3 = useRef();
+  const dataRef3 = useObserver(triggerRefAbout3, {
     freezeOnceVisible: true,
   });
 
@@ -41,6 +46,11 @@ const Proyects = function () {
     enter: { x: 0, y: 0, opacity: 1 },
   });
   const transition2 = useTransition(dataRef2, {
+    config: { duration: 500 },
+    from: { x: 200, y: 0, opacity: 0 },
+    enter: { x: 0, y: 0, opacity: 1 },
+  });
+  const transition3 = useTransition(dataRef3, {
     config: { duration: 500 },
     from: { x: 200, y: 0, opacity: 0 },
     enter: { x: 0, y: 0, opacity: 1 },
@@ -179,11 +189,11 @@ const Proyects = function () {
 
             
           </div>
-
+          <div ref={triggerRefAbout3} />
           <div className="horizontal-card">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/xKERHAeIz-Y" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"       className="video"></iframe>
 
-            {transition2((style, item) =>
+            {transition3((style, item) =>
               item ? (
                 <a.div className="card-description" style={style}>
                   <h3 className="card-title">{Chatbot.name}</h3>

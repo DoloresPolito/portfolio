@@ -54,14 +54,7 @@ const About = function () {
             <a.div style={pStyle}>
               <div className="linea"></div>
               <p className="text-about">
-                I am a full stack developer and an industrial engineer based in
-                Buenos Aires, Argentina. My interest in programming began while
-                I was studying engineering and finally a year ago I decided to
-                study it. I love the logic and structure of coding and always
-                strive to write elegant and efficient code. I lean towards front
-                end development since I really like design. I am currently
-                looking to join a technology development company to grow and
-                enhance my skills.
+              I am a full stack developer and an industrial engineer based in Buenos Aires, Argentina. My interest in programming began while I was studying engineering and finally, a year ago, I decided to study it. I love the logic and structure of coding and always strive to write elegant and efficient code. I lean towards front end development because I'm passionate about design. I am currently looking to join a technology development company to grow and enhance my skills.
               </p>
               <br />
               <div className="linea"></div>
