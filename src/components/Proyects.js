@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import useObserver from "../hooks/useObserver";
 import { useTransition, animated as a } from "react-spring";
-const { ReactSport, NetGlobal, BeluMi, proyects, Chatbot } = require("../proyects");
+const { ReactSport, NetGlobal, BeluMi, Chatbot } = require("../proyects");
 
 const Proyects = function () {
   const [width, setWidth] = useState(window.innerWidth);
@@ -62,6 +62,75 @@ const Proyects = function () {
 
       {width >= cut ? (
         <>
+         
+          <div ref={triggerRefAbout2} />
+          <div className="horizontal-card">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/AJCpdYI4Yao"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              className="video"
+            ></iframe>
+
+            {transition2((style, item) =>
+              item ? (
+                <a.div className="card-description" style={style}>
+                   <div className="github-logo-card">
+                   <h3 className="card-title">{BeluMi.name}</h3>
+                      <a href={BeluMi.links} target="_blank">
+                        <i className="bi bi-github"></i>
+                      </a>
+                    </div>
+             
+                  <p className="card-text">{BeluMi.description}</p>
+                  <br />
+                  <div className="card-stack">
+                    <ul>
+                      {BeluMi.slack.map((slack) => {
+                        return <li className="list-item">{slack}</li>;
+                      })}
+                    </ul>
+                   
+                  </div>
+                </a.div>
+              ) : (
+                ""
+              )
+            )}
+
+
+            
+          </div>
+          <div ref={triggerRefAbout3} />
+          <div className="horizontal-card">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/xKERHAeIz-Y" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"       className="video"></iframe>
+
+            {transition3((style, item) =>
+              item ? (
+                <a.div className="card-description" style={style}>
+                  <h3 className="card-title">{Chatbot.name}</h3>
+                  <p className="card-text">{Chatbot.description}</p>
+                  <br />
+                  <div className="card-stack">
+                    <ul>
+                      {Chatbot.slack.map((slack) => {
+                        return <li className="list-item">{slack}</li>;
+                      })}
+                    </ul>
+                   
+                  </div>
+                </a.div>
+              ) : (
+                ""
+              )
+            )}
+
+
+            
+          </div>
+
           <div ref={triggerRefAbout} />
           <div className="horizontal-card">
             <iframe
@@ -149,134 +218,10 @@ const Proyects = function () {
             )}
           </div>
 
-          <div ref={triggerRefAbout2} />
-          <div className="horizontal-card">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/AJCpdYI4Yao"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              className="video"
-            ></iframe>
-
-            {transition2((style, item) =>
-              item ? (
-                <a.div className="card-description" style={style}>
-                   <div className="github-logo-card">
-                   <h3 className="card-title">{BeluMi.name}</h3>
-                      <a href={BeluMi.links} target="_blank">
-                        <i className="bi bi-github"></i>
-                      </a>
-                    </div>
-             
-                  <p className="card-text">{BeluMi.description}</p>
-                  <br />
-                  <div className="card-stack">
-                    <ul>
-                      {BeluMi.slack.map((slack) => {
-                        return <li className="list-item">{slack}</li>;
-                      })}
-                    </ul>
-                   
-                  </div>
-                </a.div>
-              ) : (
-                ""
-              )
-            )}
-
-
-            
-          </div>
-          <div ref={triggerRefAbout3} />
-          <div className="horizontal-card">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/xKERHAeIz-Y" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"       className="video"></iframe>
-
-            {transition3((style, item) =>
-              item ? (
-                <a.div className="card-description" style={style}>
-                  <h3 className="card-title">{Chatbot.name}</h3>
-                  <p className="card-text">{Chatbot.description}</p>
-                  <br />
-                  <div className="card-stack">
-                    <ul>
-                      {Chatbot.slack.map((slack) => {
-                        return <li className="list-item">{slack}</li>;
-                      })}
-                    </ul>
-                   
-                  </div>
-                </a.div>
-              ) : (
-                ""
-              )
-            )}
-
-
-            
-          </div>
         </>
       ) : (
         <>
-          <div className="vertical-card">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/v6zgdsmc-OI"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              className="video"
-            ></iframe>
-            <div className="card-description">
-            <div className="github-logo-card">
-            <h3 className="card-title">{ReactSport.name}</h3>
-                <a href={ReactSport.links} target="_blank">
-                  <i className="bi bi-github"></i>
-                </a>
-              </div>
-
-              <p className="card-text">{ReactSport.description}</p>
-              <br />
-              <div className="card-stack">
-                <ul>
-                  {ReactSport.slack.map((slack) => {
-                    return <li className="list-item">{slack}</li>;
-                  })}
-                </ul>
-              </div>
-             
-            </div>
-          </div>
-          <div className="vertical-card">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/OU5o_bT37vk"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              className="video"
-            ></iframe>
-            <div className="card-description">
-            <div className="github-logo-card">
-            <h3 className="card-title">{NetGlobal.name}</h3>
-                <a href={NetGlobal.links} target="_blank">
-                  <i className="bi bi-github"></i>
-                </a>
-              </div>
-            
-              <p className="card-text">{NetGlobal.description}</p>
-              <br />
-              <div className="card-stack">
-                <ul>
-                  {NetGlobal.slack.map((slack) => {
-                    return <li className="list-item">{slack}</li>;
-                  })}
-                </ul>
-              </div>
-              
-            </div>
-          </div>
+         
 
           <div className="vertical-card">
             <iframe
@@ -334,6 +279,64 @@ const Proyects = function () {
                 </ul>
               </div>
              
+            </div>
+          </div>
+          <div className="vertical-card">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/v6zgdsmc-OI"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              className="video"
+            ></iframe>
+            <div className="card-description">
+            <div className="github-logo-card">
+            <h3 className="card-title">{ReactSport.name}</h3>
+                <a href={ReactSport.links} target="_blank">
+                  <i className="bi bi-github"></i>
+                </a>
+              </div>
+
+              <p className="card-text">{ReactSport.description}</p>
+              <br />
+              <div className="card-stack">
+                <ul>
+                  {ReactSport.slack.map((slack) => {
+                    return <li className="list-item">{slack}</li>;
+                  })}
+                </ul>
+              </div>
+             
+            </div>
+          </div>
+          <div className="vertical-card">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/OU5o_bT37vk"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              className="video"
+            ></iframe>
+            <div className="card-description">
+            <div className="github-logo-card">
+            <h3 className="card-title">{NetGlobal.name}</h3>
+                <a href={NetGlobal.links} target="_blank">
+                  <i className="bi bi-github"></i>
+                </a>
+              </div>
+            
+              <p className="card-text">{NetGlobal.description}</p>
+              <br />
+              <div className="card-stack">
+                <ul>
+                  {NetGlobal.slack.map((slack) => {
+                    return <li className="list-item">{slack}</li>;
+                  })}
+                </ul>
+              </div>
+              
             </div>
           </div>
         </>
