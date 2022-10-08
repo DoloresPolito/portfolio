@@ -6,7 +6,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #9fa88f;
+  background-color: #1b1f24 ;
+  
   /* overflow-x: hidden; */
 }
 
@@ -16,7 +17,7 @@ body {
 
   background: transparent;
   cursor: default;
-  background-color: #9fa88f;
+  /* background-color: #9fa88f; */
   overflow-x: hidden;
 }
 
@@ -28,7 +29,7 @@ body {
 .trails-text {
   display: flex;
   justify-content: center;
-  margin-top: 80px;
+  padding-top: 180px;
   height: 70px;
   line-height: 80px;
   color: rgb(66, 61, 63);
@@ -43,9 +44,7 @@ body {
   overflow: hidden;
 }
 
-.navbar-section {
-  background-color: #9fa88f;
-}
+
 
 .small-title {
   display: flex;
@@ -57,6 +56,14 @@ body {
 }
 
 .proyects-container {
+  background: conic-gradient(
+    at 27% 66%,
+    #121418 0deg,
+    #121418 70deg,
+    #1b1f24 70deg,
+    #1b1f24 284deg,
+    #121418 270deg
+  );
   margin-top: 200px;
   display: flex;
   flex-direction: column;
@@ -126,17 +133,24 @@ body {
 /*COVER*/
 
 .cover-container {
-  background-color: #9fa88f;
   color: white;
   height: calc(100vh - 80px);
   width: 100%;
+  background: conic-gradient(
+    at 27% 66%,
+    #121418 0deg,
+    #121418 70deg,
+    #1b1f24 70deg,
+    #1b1f24 284deg,
+    #121418 270deg
+  );
 }
 
 .navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #9fa88f;
+  background-color: #121418;
   color: white;
 }
 
@@ -392,7 +406,7 @@ footer {
   justify-content: center;
   height: 200px;
   width: 100%;
-  background: #9fa88f;
+  /* background: #9fa88f; */
   color: white;
   font-size: 15px;
 }
@@ -798,6 +812,7 @@ footer aside p {
 }
 
 .aboutme-container {
+
   margin: 0 auto;
   flex-wrap: wrap;
   display: flex;
