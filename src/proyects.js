@@ -2,7 +2,7 @@ const BeluMi = {
   name: "BELEN MIGUENS FOTOGRAFIA",
   description:
   
-"Web page made for the photographer Belén Miguens where the different courses and photo sessions she offers are exposed. There is also a contact form for questions, a listing of her projects and a photo gallery where you can see the works she has done throughout her career.",
+"Web page made for the photographer Belén Miguens where the different courses and photo sessions she offers are exposed. There is also a contact section, a listing of her projects and a photo gallery where you can see the works she has done throughout her career.",
   slack: ["React", "Bootstrap", "React-Spring"],
   links: ["https://github.com/DoloresPolito/bmweb"],
 
@@ -11,7 +11,7 @@ const BeluMi = {
 const NetGlobal = {    name: "NET GLOBAL",
 description:
 "Web application and PWA from which a security company can manage and control the presence of guards within the different branches of its clients, and security guards can check their worked hours, schedules and which location they are to work at.",
-slack: ["React","Redux", "JWT", "PWA", "Sequelize", "Express"],
+slack: ["React","Redux", "JWT", "PWA"],
 links: ["https://github.com/DoloresPolito/net-global"],
 }
 
@@ -19,7 +19,7 @@ const ReactSport = {
   name: "REACT SPORT",
   description:
   "E-commerce of sports products where you can search by product or category, see product details, add products to the cart and make a purchase. It also allows you to see reviews and make them once the product is purchased. Registration and login through different platforms and session persistence.",
-    slack: ["React","Chakra-UI", "Sequelize", "Express", "Postgres"],
+    slack: ["React","Chakra-UI", "Postgres"],
   links: ["https://github.com/DoloresPolito/reactsport"],
 }
 

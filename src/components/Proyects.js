@@ -16,7 +16,6 @@ const Proyects = function () {
   const triggerRefAbout = useRef();
   const dataRef = useObserver(triggerRefAbout, {
     freezeOnceVisible: true,
-    
   });
 
   const triggerRefAbout1 = useRef();
@@ -62,7 +61,6 @@ const Proyects = function () {
 
       {width >= cut ? (
         <>
-         
           <div ref={triggerRefAbout2} />
           <div className="horizontal-card">
             <iframe
@@ -77,13 +75,13 @@ const Proyects = function () {
             {transition2((style, item) =>
               item ? (
                 <a.div className="card-description" style={style}>
-                   <div className="github-logo-card">
-                   <h3 className="card-title">{BeluMi.name}</h3>
-                      <a href={BeluMi.links} target="_blank">
-                        <i className="bi bi-github"></i>
-                      </a>
-                    </div>
-             
+                  <div className="github-logo-card">
+                    <h3 className="card-title">{BeluMi.name}</h3>
+                    <a href={BeluMi.links} target="_blank">
+                      <i className="bi bi-github"></i>
+                    </a>
+                  </div>
+
                   <p className="card-text">{BeluMi.description}</p>
                   <br />
                   <div className="card-stack">
@@ -92,20 +90,23 @@ const Proyects = function () {
                         return <li className="list-item">{slack}</li>;
                       })}
                     </ul>
-                   
                   </div>
                 </a.div>
               ) : (
                 ""
               )
             )}
-
-
-            
           </div>
           <div ref={triggerRefAbout3} />
           <div className="horizontal-card">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/xKERHAeIz-Y" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"       className="video"></iframe>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/xKERHAeIz-Y"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              className="video"
+            ></iframe>
 
             {transition3((style, item) =>
               item ? (
@@ -119,16 +120,12 @@ const Proyects = function () {
                         return <li className="list-item">{slack}</li>;
                       })}
                     </ul>
-                   
                   </div>
                 </a.div>
               ) : (
                 ""
               )
             )}
-
-
-            
           </div>
 
           <div ref={triggerRefAbout} />
@@ -145,9 +142,8 @@ const Proyects = function () {
             {transition((style, item) =>
               item ? (
                 <a.div className="card-description" style={style}>
-
-                   <div className="github-logo-card">
-                   <h3 className="card-title">{ReactSport.name}</h3>
+                  <div className="github-logo-card">
+                    <h3 className="card-title">{ReactSport.name}</h3>
 
                     <a
                       href="https://github.com/DoloresPolito"
@@ -157,7 +153,7 @@ const Proyects = function () {
                       <i className="bi bi-github"></i>
                     </a>
                   </div>
-               
+
                   <p className="card-text">{ReactSport.description}</p>
                   <br />
                   <div className="card-stack">
@@ -165,13 +161,8 @@ const Proyects = function () {
                       {ReactSport.slack.map((slack) => {
                         return <li className="list-item">{slack}</li>;
                       })}
-                  
                     </ul>
-
-                   
                   </div>
-                 
-                 
                 </a.div>
               ) : (
                 ""
@@ -193,14 +184,13 @@ const Proyects = function () {
             {transition1((style, item) =>
               item ? (
                 <a.div className="card-description" style={style}>
-
-<div className="github-logo-card">
-<h3 className="card-title">{NetGlobal.name}</h3>
+                  <div className="github-logo-card">
+                    <h3 className="card-title">{NetGlobal.name}</h3>
                     <a href={NetGlobal.links} target="_blank">
                       <i className="bi bi-github"></i>
                     </a>
                   </div>
-             
+
                   <p className="card-text">{NetGlobal.description}</p>
                   <br />
                   <div className="card-stack">
@@ -210,19 +200,15 @@ const Proyects = function () {
                       })}
                     </ul>
                   </div>
-                 
                 </a.div>
               ) : (
                 ""
               )
             )}
           </div>
-
         </>
       ) : (
         <>
-         
-
           <div className="vertical-card">
             <iframe
               width="560"
@@ -233,13 +219,13 @@ const Proyects = function () {
               className="video"
             ></iframe>
             <div className="card-description">
-            <div className="github-logo-card">
-            <h3 className="card-title">{BeluMi.name}</h3>
+              <div className="github-logo-card">
+                <h3 className="card-title">{BeluMi.name}</h3>
                 <a href={BeluMi.links} target="_blank">
                   <i className="bi bi-github"></i>
                 </a>
               </div>
-           
+
               <p className="card-text">{BeluMi.description}</p>
               {/* <div style={slideStyles} className="slides"></div> */}
 
@@ -251,16 +237,14 @@ const Proyects = function () {
                   })}
                 </ul>
               </div>
-             
             </div>
           </div>
-
 
           <div className="vertical-card">
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/xKERHAeIz-Y" 
+              src="https://www.youtube.com/embed/xKERHAeIz-Y"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               className="video"
@@ -278,7 +262,6 @@ const Proyects = function () {
                   })}
                 </ul>
               </div>
-             
             </div>
           </div>
           <div className="vertical-card">
@@ -291,8 +274,8 @@ const Proyects = function () {
               className="video"
             ></iframe>
             <div className="card-description">
-            <div className="github-logo-card">
-            <h3 className="card-title">{ReactSport.name}</h3>
+              <div className="github-logo-card">
+                <h3 className="card-title">{ReactSport.name}</h3>
                 <a href={ReactSport.links} target="_blank">
                   <i className="bi bi-github"></i>
                 </a>
@@ -307,9 +290,9 @@ const Proyects = function () {
                   })}
                 </ul>
               </div>
-             
             </div>
           </div>
+
           <div className="vertical-card">
             <iframe
               width="560"
@@ -320,13 +303,13 @@ const Proyects = function () {
               className="video"
             ></iframe>
             <div className="card-description">
-            <div className="github-logo-card">
-            <h3 className="card-title">{NetGlobal.name}</h3>
-                <a href={NetGlobal.links} target="_blank">
+              <div className="github-logo-card">
+                <h3 className="card-title">{NetGlobal.name}</h3>
+                <a href={ReactSport.links} target="_blank">
                   <i className="bi bi-github"></i>
                 </a>
               </div>
-            
+
               <p className="card-text">{NetGlobal.description}</p>
               <br />
               <div className="card-stack">
@@ -336,9 +319,9 @@ const Proyects = function () {
                   })}
                 </ul>
               </div>
-              
             </div>
           </div>
+
         </>
       )}
     </div>

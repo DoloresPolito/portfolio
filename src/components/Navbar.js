@@ -24,7 +24,7 @@ const Navbar = function () {
       {navbarWidth >= navbarCut ? (
         <>
           <nav className="navbar">
-            <div className="navbar-links">
+            <div className="navbar-links"      >
               <ul>
                 <li>
            
@@ -84,12 +84,13 @@ const Navbar = function () {
                 className="toggle-button"
                 id="toggle-button"
                 onClick={() => open()}
+           
               >
                 <span className="bar"></span>
                 <span className="bar"></span>
                 <span className="bar"></span>
               </a>
-              <div className="open-nav">
+              <div className="open-nav" >
                 <ul>
                   <li>
                     <Link
@@ -139,6 +140,7 @@ const Navbar = function () {
                 onClick={() => open()}
                 toggled={isOpen}
                 toggle={setIsOpen}
+             
               >
                 <span className="bar"></span>
                 <span className="bar"></span>

@@ -6,7 +6,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #1b1f24 ;
+  background-color: #121418 ;
   
   /* overflow-x: hidden; */
 }
@@ -69,6 +69,7 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   margin-bottom: 200px;
+  padding-bottom: 100px;
 }
 .horizontal-card {
   display: flex;
@@ -233,6 +234,7 @@ body {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    
 
   }
 
@@ -253,8 +255,13 @@ body {
   .open-nav {
     display: flex;
     margin-top: 40px;
-    background-color: #9fa88f;
-
+    background-color: #121418;
+/* 
+    #121418 0deg,
+    #121418 70deg,
+    #1b1f24 70deg,
+    #1b1f24 284deg,
+    #121418 270deg */
 
   }
 
@@ -346,7 +353,8 @@ body {
   .open-nav {
     display: flex;
     margin-top: 40px;
-    background-color: #9fa88f;
+    background-color: #121418 ;
+
   }
 
   .open-nav ul {
