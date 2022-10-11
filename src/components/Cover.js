@@ -142,12 +142,12 @@ const Cover = function () {
               className="cover-bottom"
               onClick={() => {
                 downloadFile(
-                  "http://localhost:3000/assets/DoloresPolito_RESUME.pdf",
+                  "https://dolorespolito.github.io/portfolio/assets/DoloresPolito_RESUME.pdf",
                   "Resume - Dolores Polito"
                 );
               }}
             >
-              Download Resume <i className="bi bi-download"></i>
+              <p>Download Resume</p> <i className="bi bi-download"></i>
             </button>
           </a.div>
         ) : (
@@ -164,7 +164,7 @@ const Cover = function () {
           offset={30}
           duration={800}
         >
-          <img src={logo}></img>
+          <img src={logo} alt="logo"></img>
         </Link>
       </div>
     </div>

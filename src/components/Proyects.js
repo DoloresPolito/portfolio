@@ -77,7 +77,7 @@ const Proyects = function () {
                 <a.div className="card-description" style={style}>
                   <div className="github-logo-card">
                     <h3 className="card-title">{BeluMi.name}</h3>
-                    <a href={BeluMi.links} target="_blank">
+                    <a href={BeluMi.links} target="_blank" rel="noreferrer" >
                       <i className="bi bi-github"></i>
                     </a>
                   </div>
@@ -87,7 +87,7 @@ const Proyects = function () {
                   <div className="card-stack">
                     <ul>
                       {BeluMi.slack.map((slack) => {
-                        return <li className="list-item">{slack}</li>;
+                        return <li key= {slack} className="list-item">{slack}</li>;
                       })}
                     </ul>
                   </div>
@@ -117,7 +117,7 @@ const Proyects = function () {
                   <div className="card-stack">
                     <ul>
                       {Chatbot.slack.map((slack) => {
-                        return <li className="list-item">{slack}</li>;
+                        return <li key= {slack} className="list-item">{slack}</li>;
                       })}
                     </ul>
                   </div>
@@ -159,7 +159,7 @@ const Proyects = function () {
                   <div className="card-stack">
                     <ul>
                       {ReactSport.slack.map((slack) => {
-                        return <li className="list-item">{slack}</li>;
+                        return <li key= {slack} className="list-item">{slack}</li>;
                       })}
                     </ul>
                   </div>
@@ -186,7 +186,7 @@ const Proyects = function () {
                 <a.div className="card-description" style={style}>
                   <div className="github-logo-card">
                     <h3 className="card-title">{NetGlobal.name}</h3>
-                    <a href={NetGlobal.links} target="_blank">
+                    <a href={NetGlobal.links} target="_blank" rel="noreferrer" >
                       <i className="bi bi-github"></i>
                     </a>
                   </div>
@@ -196,7 +196,7 @@ const Proyects = function () {
                   <div className="card-stack">
                     <ul>
                       {NetGlobal.slack.map((slack) => {
-                        return <li className="list-item">{slack}</li>;
+                        return <li key= {slack} className="list-item">{slack}</li>;
                       })}
                     </ul>
                   </div>
@@ -221,7 +221,7 @@ const Proyects = function () {
             <div className="card-description">
               <div className="github-logo-card">
                 <h3 className="card-title">{BeluMi.name}</h3>
-                <a href={BeluMi.links} target="_blank">
+                <a href={BeluMi.links} target="_blank" rel="noreferrer" >
                   <i className="bi bi-github"></i>
                 </a>
               </div>
@@ -233,7 +233,7 @@ const Proyects = function () {
               <div className="card-stack">
                 <ul>
                   {BeluMi.slack.map((slack) => {
-                    return <li className="list-item">{slack}</li>;
+                    return <li  key= {slack} className="list-item">{slack}</li>;
                   })}
                 </ul>
               </div>
@@ -258,7 +258,7 @@ const Proyects = function () {
               <div className="card-stack">
                 <ul>
                   {Chatbot.slack.map((slack) => {
-                    return <li className="list-item">{slack}</li>;
+                    return <li key= {slack} className="list-item">{slack}</li>;
                   })}
                 </ul>
               </div>
@@ -276,7 +276,7 @@ const Proyects = function () {
             <div className="card-description">
               <div className="github-logo-card">
                 <h3 className="card-title">{ReactSport.name}</h3>
-                <a href={ReactSport.links} target="_blank">
+                <a href={ReactSport.links} target="_blank" rel="noreferrer" >
                   <i className="bi bi-github"></i>
                 </a>
               </div>
@@ -286,7 +286,7 @@ const Proyects = function () {
               <div className="card-stack">
                 <ul>
                   {ReactSport.slack.map((slack) => {
-                    return <li className="list-item">{slack}</li>;
+                    return <li key= {slack} className="list-item">{slack}</li>;
                   })}
                 </ul>
               </div>
@@ -305,7 +305,7 @@ const Proyects = function () {
             <div className="card-description">
               <div className="github-logo-card">
                 <h3 className="card-title">{NetGlobal.name}</h3>
-                <a href={ReactSport.links} target="_blank">
+                <a href={ReactSport.links} target="_blank" rel="noreferrer" >
                   <i className="bi bi-github"></i>
                 </a>
               </div>
@@ -315,7 +315,7 @@ const Proyects = function () {
               <div className="card-stack">
                 <ul>
                   {NetGlobal.slack.map((slack) => {
-                    return <li className="list-item">{slack}</li>;
+                    return <li key= {slack} className="list-item">{slack}</li>;
                   })}
                 </ul>
               </div>

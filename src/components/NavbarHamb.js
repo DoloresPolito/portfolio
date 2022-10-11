@@ -41,19 +41,13 @@ const NavbarSection = styled.section`
   top: 0;
   width: 100%;
   margin: auto;
-  .hamburger-react {
+  .hamburger-react 
     position: relative;
     z-index: 3;
     color: white;
   }
 
-  .hamburger-react :nth-child(2) {
-    background: #1b1f24 !important;
-  }
-  .isClosed .hamburger-react :nth-child(3) {
-    left: 22px !important;
-    width: 18px !important;
-  }
+
 `
 
 const NavbarContainer = styled(Container)`
