@@ -10,7 +10,6 @@ const Home = function () {
   return (
     <>
     <NavbarHamb/>
-    {/* <Navbar/> */}
       <Cover />
       <About/>
       <Proyects/>
