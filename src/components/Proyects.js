@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import useObserver from "../hooks/useObserver";
 import { useTransition, animated as a } from "react-spring";
+import { Parallax } from "react-scroll-parallax";
 const { ReactSport, NetGlobal, BeluMi, Chatbot } = require("../proyects");
+
 
 const Proyects = function () {
   const [width, setWidth] = useState(window.innerWidth);
@@ -62,6 +64,7 @@ const Proyects = function () {
       {width >= cut ? (
         <>
           <div ref={triggerRefAbout2} />
+
           <div className="horizontal-card">
             <iframe
               width="560"
@@ -74,6 +77,7 @@ const Proyects = function () {
 
             {transition2((style, item) =>
               item ? (
+                <Parallax speed={5}>
                 <a.div className="card-description" style={style}>
                   <div className="github-logo-card">
                     <h3 className="card-title">{BeluMi.name}</h3>
@@ -83,7 +87,7 @@ const Proyects = function () {
                   </div>
 
                   <p className="card-text">{BeluMi.description}</p>
-                  <br />
+           <br/>
                   <div className="card-stack">
                     <ul>
                       {BeluMi.slack.map((slack) => {
@@ -92,11 +96,13 @@ const Proyects = function () {
                     </ul>
                   </div>
                 </a.div>
+                          </Parallax >
               ) : (
                 ""
               )
             )}
           </div>
+
           <div ref={triggerRefAbout3} />
           <div className="horizontal-card">
             <iframe
@@ -110,10 +116,11 @@ const Proyects = function () {
 
             {transition3((style, item) =>
               item ? (
+                <Parallax speed={5}>
                 <a.div className="card-description" style={style}>
                   <h3 className="card-title">{Chatbot.name}</h3>
                   <p className="card-text">{Chatbot.description}</p>
-                  <br />
+                  <br/>
                   <div className="card-stack">
                     <ul>
                       {Chatbot.slack.map((slack) => {
@@ -122,6 +129,7 @@ const Proyects = function () {
                     </ul>
                   </div>
                 </a.div>
+                </Parallax >
               ) : (
                 ""
               )
@@ -141,6 +149,7 @@ const Proyects = function () {
 
             {transition((style, item) =>
               item ? (
+                <Parallax speed={5}>
                 <a.div className="card-description" style={style}>
                   <div className="github-logo-card">
                     <h3 className="card-title">{ReactSport.name}</h3>
@@ -155,7 +164,7 @@ const Proyects = function () {
                   </div>
 
                   <p className="card-text">{ReactSport.description}</p>
-                  <br />
+                  <br/>
                   <div className="card-stack">
                     <ul>
                       {ReactSport.slack.map((slack) => {
@@ -163,7 +172,7 @@ const Proyects = function () {
                       })}
                     </ul>
                   </div>
-                </a.div>
+                </a.div>       </Parallax >
               ) : (
                 ""
               )
@@ -183,6 +192,7 @@ const Proyects = function () {
 
             {transition1((style, item) =>
               item ? (
+                <Parallax speed={5}>
                 <a.div className="card-description" style={style}>
                   <div className="github-logo-card">
                     <h3 className="card-title">{NetGlobal.name}</h3>
@@ -192,7 +202,7 @@ const Proyects = function () {
                   </div>
 
                   <p className="card-text">{NetGlobal.description}</p>
-                  <br />
+                  <br/>
                   <div className="card-stack">
                     <ul>
                       {NetGlobal.slack.map((slack) => {
@@ -201,6 +211,7 @@ const Proyects = function () {
                     </ul>
                   </div>
                 </a.div>
+                </Parallax >
               ) : (
                 ""
               )
@@ -218,6 +229,7 @@ const Proyects = function () {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               className="video"
             ></iframe>
+                <Parallax speed={5}>
             <div className="card-description">
               <div className="github-logo-card">
                 <h3 className="card-title">{BeluMi.name}</h3>
@@ -227,9 +239,9 @@ const Proyects = function () {
               </div>
 
               <p className="card-text">{BeluMi.description}</p>
-              {/* <div style={slideStyles} className="slides"></div> */}
 
-              <br />
+
+    
               <div className="card-stack">
                 <ul>
                   {BeluMi.slack.map((slack) => {
@@ -238,6 +250,7 @@ const Proyects = function () {
                 </ul>
               </div>
             </div>
+            </Parallax>
           </div>
 
           <div className="vertical-card">
@@ -249,12 +262,13 @@ const Proyects = function () {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               className="video"
             ></iframe>
+                <Parallax speed={5}>
             <div className="card-description">
               <h3 className="card-title">{Chatbot.name}</h3>
               <p className="card-text">{Chatbot.description}</p>
-              {/* <div style={slideStyles} className="slides"></div> */}
+        
 
-              <br />
+          
               <div className="card-stack">
                 <ul>
                   {Chatbot.slack.map((slack) => {
@@ -263,6 +277,7 @@ const Proyects = function () {
                 </ul>
               </div>
             </div>
+            </Parallax>
           </div>
           <div className="vertical-card">
             <iframe
@@ -273,6 +288,7 @@ const Proyects = function () {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               className="video"
             ></iframe>
+                <Parallax speed={5}>
             <div className="card-description">
               <div className="github-logo-card">
                 <h3 className="card-title">{ReactSport.name}</h3>
@@ -282,7 +298,7 @@ const Proyects = function () {
               </div>
 
               <p className="card-text">{ReactSport.description}</p>
-              <br />
+  
               <div className="card-stack">
                 <ul>
                   {ReactSport.slack.map((slack) => {
@@ -291,6 +307,7 @@ const Proyects = function () {
                 </ul>
               </div>
             </div>
+            </Parallax>
           </div>
 
           <div className="vertical-card">
@@ -302,6 +319,7 @@ const Proyects = function () {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               className="video"
             ></iframe>
+                <Parallax speed={5}>
             <div className="card-description">
               <div className="github-logo-card">
                 <h3 className="card-title">{NetGlobal.name}</h3>
@@ -311,7 +329,7 @@ const Proyects = function () {
               </div>
 
               <p className="card-text">{NetGlobal.description}</p>
-              <br />
+          
               <div className="card-stack">
                 <ul>
                   {NetGlobal.slack.map((slack) => {
@@ -320,6 +338,7 @@ const Proyects = function () {
                 </ul>
               </div>
             </div>
+            </Parallax>
           </div>
 
         </>

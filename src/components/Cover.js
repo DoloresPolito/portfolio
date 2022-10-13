@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import useObserver from "../hooks/useObserver";
+import { Parallax } from "react-scroll-parallax";
 import {
   useTrail,
   useSpring,
@@ -86,6 +87,7 @@ const Cover = function () {
 
       {coverWidth >= coverCut ? (
         <>
+          <Parallax speed={5}>
           <div>
             {trail.map(({ x, height, ...rest }, index) => (
               <a.div
@@ -101,27 +103,34 @@ const Cover = function () {
               </a.div>
             ))}
           </div>
+          </Parallax>
+
         </>
       ) : (
         <>
           <div style={smallTitle}>
+          <Parallax speed={3}>
             <h1 className="small-title">
               Hi, I'm 
               Dolores Polito.
             </h1>
+            </Parallax>
           </div>
         </>
       )}
 
       <a.div style={paStyle}>
+      <Parallax speed={5}>
         <div>
           <p className="subname">FULLSTACK DEVELOPER | INDUSTRIAL ENGINEER</p>
         </div>
+        </Parallax>
       </a.div>
       <div ref={triggerRefAbout1} />
 
       {transition((style, item) =>
         item ? (
+          <Parallax speed={5}>
           <a.div className="cover-links" style={style}>
             <a
               href="https://www.linkedin.com/in/dolores-polito/"
@@ -150,23 +159,25 @@ const Cover = function () {
               <p>Download Resume</p> <i className="bi bi-download"></i>
             </button>
           </a.div>
+          </Parallax>
         ) : (
           ""
         )
       )}
-
+      <Parallax speed={5}>
       <div className="arrow-logo">
         <Link
           className="nav-item"
           to="about"
           spy={true}
           smooth={true}
-          offset={30}
+          offset={-30}
           duration={800}
         >
           <img src={logo} alt="logo"></img>
         </Link>
       </div>
+      </Parallax>
     </div>
   );
 };

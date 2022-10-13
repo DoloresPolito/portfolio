@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import useObserver from "../hooks/useObserver";
 import { useTransition, animated as a } from "react-spring";
+import { Parallax } from "react-scroll-parallax";
 import "../App.css";
 
 function Contact() {
@@ -27,9 +28,13 @@ function Contact() {
 
   return (
     <>
-      <h2 className="title">CONTACT ME</h2>
+          <Parallax speed={5}>
+          <h2 className="title">CONTACT ME</h2>
+          </Parallax>
+
       <div ref={triggerRefAbout1} />
       <div ref={triggerRefAbout2} />
+      <Parallax speed={5}>
       <div className="contact" id="contact">
         {transition1((style, item) =>
           item ? (
@@ -79,7 +84,9 @@ function Contact() {
           )
         )}
       </div>
+      </Parallax >
 
+      <Parallax speed={15}>
       <div className="contact-other">
         <div className="other-item">
           <a
@@ -101,6 +108,7 @@ function Contact() {
           </a>
         </div>
       </div>
+      </Parallax >
     </>
   );
 }

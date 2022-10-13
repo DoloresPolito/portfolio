@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import ScrollToTop from "react-scroll-to-top";
+import { Parallax } from "react-scroll-parallax";
 import "../App.css";
 
 import useObserver from "../hooks/useObserver";
@@ -46,21 +47,29 @@ const About = function () {
   return (
     <>
       <div className="aboutme-container" id="about">
+  
         <h2 className="title">ABOUT ME</h2>
+  
 
         <section className="aboutme-section">
+        <Parallax speed={8}>
           <div className="content">
             <div ref={triggerRefAbout} />
+         
             <a.div style={pStyle}>
               <div className="linea"></div>
+       
               <p className="text-about">
               I am a full stack developer and an industrial engineer based in Buenos Aires, Argentina. My interest in programming began while I was studying engineering and finally, a year ago, I decided to study it. I love the logic and structure of coding and always strive to write elegant and efficient code. I lean towards front end development because I'm passionate about design. I am currently looking to join a technology development company to grow and enhance my skills.
               </p>
               <br />
               <div className="linea"></div>
             </a.div>
+ 
           </div>
+          </Parallax>
         </section>
+        <Parallax speed={15}>
         <section className="aboutme-section-stack">
           <div ref={triggerRefAbout1} />
           <div ref={triggerRefAbout2} />
@@ -140,6 +149,7 @@ const About = function () {
           )}
           <div className="linea"></div>
         </section>
+        </Parallax>
 
         <ScrollToTop
           style={{
