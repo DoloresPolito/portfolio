@@ -488,8 +488,9 @@ footer aside p {
 
 .cover-bottom:hover {
   /* color: #7a746e; */
-  background-color: #949994;
-  border: 1px solid #949994;
+  background-color: white;
+  border: 1px solid white;
+  color:black;
 }
 .linea {
   border-top: 1px solid white;
